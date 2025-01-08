@@ -8,9 +8,11 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      fontFamily: {
+        helvetica: ["var(--font-helvetica)"],
+        "helvetica-bold": ["var(--font-helvetica-bold)"],
+        italiana: ["var(--font-italiana)"],
+        tangerine: ["var(--font-tangerine)"],
       },
     },
   },

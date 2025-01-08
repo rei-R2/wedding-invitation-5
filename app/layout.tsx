@@ -1,15 +1,32 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Italiana, Tangerine } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const helvetica = localFont({
+  src: "./Helvetica/Helvetica.ttf",
+  variable: "--font-helvetica",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const helveticaBold = localFont({
+  src: "./Helvetica/Helvetica-Bold.ttf",
+  variable: "--font-helvetica-bold",
+  display: "swap",
+});
+
+const italiana = Italiana({
+  variable: "--font-italiana",
   subsets: ["latin"],
+  weight: ["400"],
+  display: "swap",
+});
+
+const tangerine = Tangerine({
+  variable: "--font-tangerine",
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -25,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${italiana.variable} ${helvetica.variable} ${helveticaBold.variable} ${italiana.variable} ${tangerine.variable} antialiased`}
       >
         {children}
       </body>
