@@ -42,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${italiana.variable} ${helvetica.variable} ${helveticaBold.variable} ${italiana.variable} ${tangerine.variable} antialiased`}
+        className={`${italiana.variable} ${helvetica.variable} ${helveticaBold.variable} ${italiana.variable} ${tangerine.variable} relative antialiased`}
       >
         {children}
       </body>

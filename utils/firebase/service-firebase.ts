@@ -3,7 +3,12 @@ import { app } from "./init-firebase";
 
 const firebase = getFirestore(app);
 
-export const createComment = async (comment: any) => {
+interface Comment {
+  name: string;
+  message: string;
+}
+
+export const createComment = async (comment: Comment) => {
   return await addDoc(collection(firebase, "client-02"), {
     ...comment,
   })

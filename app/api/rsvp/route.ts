@@ -2,12 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 export async function POST(req: NextRequest) {
-  let guest = await req.json();
-  console.log({ GUEST: guest });
-  console.log({
-    EMAIL: process.env.NODEMAILER_EMAIL,
-    PASSWORD: process.env.NODEMAILER_PASSWORD,
-  });
+  const guest = await req.json();
 
   const transporter = nodemailer.createTransport({
     service: "gmail",
